@@ -20,28 +20,28 @@ import {
 
 //  data
 const aboutData = [
-  {
-    title: 'skills',
-    info: [
-      {
-        title: 'Web Development',
-        icons: [
-          <FaHtml5 />,
-          <FaCss3 />,
-          <FaJs />,
-          <FaReact />,
-          <SiNextdotjs />,
-          <SiRedux />,
-          <SiTailwindcss />,
-          <FaWordpress />,
-        ],
-      },
-      {
-        title: 'UI/UX Design',
-        icons: [<FaFigma />],
-      },
-    ],
-  },
+  // {
+  //   title: 'skills',
+  //   info: [
+  //     {
+  //       title: 'Web Development',
+  //       icons: [
+  //         <FaHtml5 />,
+  //         <FaCss3 />,
+  //         <FaJs />,
+  //         <FaReact />,
+  //         <SiNextdotjs />,
+  //         <SiRedux />,
+  //         <SiTailwindcss />,
+  //         <FaWordpress />,
+  //       ],
+  //     },
+  //     {
+  //       title: 'UI/UX Design',
+  //       icons: [<FaFigma />],
+  //     },
+  //   ],
+  // },
   {
     title: 'awards',
     info: [

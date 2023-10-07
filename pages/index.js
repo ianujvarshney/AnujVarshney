@@ -15,7 +15,7 @@ import { fadeIn } from '../variants'
 
 const Home = () => {
   const [text] = useTypewriter({
-    words: ['Hi, I am Anuj Varshney!','React Developer', 'Next Developer'],
+    words: ['React Developer', 'Next Developer'],
     loop: 10,
     onLoopDone: () => console.log(`loop completed after 3 runs.`)
   })

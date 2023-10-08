@@ -16,12 +16,12 @@ const workSlider = {
         {
           title: 'title',
           path: '/project3.png',
-          location: 'https://iquincesoft.com/'
+          location: 'https://github.com/ianujvarshney/CapitalOne-Travel'
         },
         {
           title: 'title',
           path: '/project4.png',
-          location: 'https://iquincesoft.com/'
+          location: 'http://anujvarshney.live/'
         },
       ],
     },
@@ -30,17 +30,17 @@ const workSlider = {
         {
           title: 'title',
           path: '/project5.png',
-          location: 'https://iquincesoft.com/'
+          location: 'https://iqdev.biz/pushman/'
         },
         {
           title: 'title',
           path: '/project6.png',
-          location: 'https://lzh.3bd.myftpupload.com/'
+          location: 'https://awofields.com/'
         },
         {
           title: 'title',
           path: '/project7.png',
-          location: 'https://awofields.com/'
+          location: 'https://lzh.3bd.myftpupload.com/'
         },
         {
           title: 'title',

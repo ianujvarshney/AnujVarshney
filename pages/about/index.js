@@ -20,28 +20,28 @@ import {
 
 //  data
 const aboutData = [
-  // {
-  //   title: 'skills',
-  //   info: [
-  //     {
-  //       title: 'Web Development',
-  //       icons: [
-  //         <FaHtml5 />,
-  //         <FaCss3 />,
-  //         <FaJs />,
-  //         <FaReact />,
-  //         <SiNextdotjs />,
-  //         <SiRedux />,
-  //         <SiTailwindcss />,
-  //         <FaWordpress />,
-  //       ],
-  //     },
-  //     {
-  //       title: 'UI/UX Design',
-  //       icons: [<FaFigma />],
-  //     },
-  //   ],
-  // },
+  {
+    title: 'skills',
+    info: [
+      {
+        title: 'Web Development',
+        icons: [
+          <FaHtml5 />,
+          <FaCss3 />,
+          <FaJs />,
+          <FaReact />,
+          <SiNextdotjs />,
+          <SiRedux />,
+          <SiTailwindcss />,
+          <FaWordpress />,
+        ],
+      },
+      {
+        title: 'UI/UX Design',
+        icons: [<FaFigma />],
+      },
+    ],
+  },
   {
     title: 'awards',
     info: [
@@ -115,9 +115,9 @@ const About = () => {
       <Circles />
 
       {/* avatar image */}
-      <motion.div variants={fadeIn('right', 0.2)} initial="hidden" animate="show" exit="hidden" className="hidden xl:flex absolute bottom-0 -left-[370px]">
+      {/* <motion.div variants={fadeIn('right', 0.2)} initial="hidden" animate="show" exit="hidden" className="hidden xl:flex absolute bottom-0 -left-[370px]">
         <Avatar />
-      </motion.div>
+      </motion.div> */}
 
       <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6">
         {/* text */}

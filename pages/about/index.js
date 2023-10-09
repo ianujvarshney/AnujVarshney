@@ -122,7 +122,7 @@ const About = () => {
       <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6">
         {/* text */}
         <div className="flex-1 flex flex-col justify-center">
-          <motion.h2 variants={fadeIn('right', 0.2)} initial="hidden" animate="show" exit="hidden" className="h2">Captivating <span className="text-accent">stories</span> birth magnificent design.</motion.h2>
+          <motion.h2 variants={fadeIn('right', 0.2)} initial="hidden" animate="show" exit="hidden" className="h2"><span className="text-accent">Web </span>Developer Portfolio</motion.h2>
           <motion.p variants={fadeIn('right', 0.4)} initial="hidden" animate="show" exit="hidden" className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0 ">
             Hello, I Am Currently Pursuing My MCA at CUIDOL, Specializing in Computer Science. I Have Successfully Completed My B.C.A, Also Specializing in Computer Science. Currently.
           </motion.p>

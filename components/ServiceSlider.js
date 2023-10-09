@@ -23,28 +23,28 @@ import {
 const serviceData = [
   {
     icon: <RxCrop />,
-    title: 'Branding',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    title: 'Web Development',
+    description: 'Expert in building visually appealing websites using React.js and Next.js.',
   },
   {
     icon: <RxPencil2 />,
-    title: 'Design',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    title: 'Project Management',
+    description: 'Streamlining projects with tools like Asana for efficient planning and execution.',
   },
   {
     icon: <RxDesktop />,
-    title: 'Development',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    title: 'API Integration',
+    description: 'API integration expert for enhanced website functionality, seamless communication.',
   },
   {
     icon: <RxReader />,
-    title: 'Copywriting',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    title: 'Custom Component',
+    description: 'custom components, meeting project needs, enhancing unique user interfaces.',
   },
   {
     icon: <RxRocket />,
-    title: 'SEO',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    title: 'OptiPerf',
+    description: 'Optimizing websites for speed, ensuring swift loading, improved overall performance.',
   },
 ];
 
@@ -84,7 +84,7 @@ const ServiceSlider = () => {
             </div>
             {/* arrow */}
             <div className='text-3xl'>
-              <RxArrowTopRight className='group-hover:rotate-45 group-hover:text-accent transition-all duration-300'/>
+              <RxArrowTopRight className='group-hover:rotate-45 group-hover:text-accent transition-all duration-300' />
             </div>
           </div>
         </SwiperSlide>

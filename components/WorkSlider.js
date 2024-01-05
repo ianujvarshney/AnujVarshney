@@ -16,58 +16,58 @@ const workSlider = {
         {
           title: 'title',
           path: '/project3.png',
-          location: 'https://github.com/ianujvarshney/CapitalOne-Travel'
+          location: 'https://anujvarshney.live/'
         },
         {
           title: 'title',
           path: '/project4.png',
-          location: 'http://anujvarshney.live/'
+          location: 'https://snap-short-url.vercel.app/'
         },
       ],
     },
-    {
-      images: [
-        {
-          title: 'title',
-          path: '/project5.png',
-          location: 'https://iqdev.biz/pushman/'
-        },
-        {
-          title: 'title',
-          path: '/project6.png',
-          location: 'https://awofields.com/'
-        },
-        {
-          title: 'title',
-          path: '/project7.png',
-          location: 'https://lzh.3bd.myftpupload.com/'
-        },
-        {
-          title: 'title',
-          path: '/project8.png',
-          location: 'https://iqdev.biz/fly-credit'
-        },
-      ],
-    },
-    {
-      images: [
-        {
-          title: 'title',
-          path: '/project9.png',
-          location: 'https://iqdev.biz/befoundnext/'
-        },
-        {
-          title: 'title',
-          path: '/project10.png',
-          location: 'https://iqdev.biz/manam-dental/'
-        },
-        {
-          title: 'title',
-          path: '/project11.png',
-          location: 'https://iqdev.biz/peru/'
-        }
-      ],
-    },
+    // {
+    //   images: [
+    //     {
+    //       title: 'title',
+    //       path: '/project5.png',
+    //       location: 'https://iqdev.biz/pushman/'
+    //     },
+    //     {
+    //       title: 'title',
+    //       path: '/project6.png',
+    //       location: 'https://awofields.com/'
+    //     },
+    //     {
+    //       title: 'title',
+    //       path: '/project7.png',
+    //       location: 'https://lzh.3bd.myftpupload.com/'
+    //     },
+    //     {
+    //       title: 'title',
+    //       path: '/project8.png',
+    //       location: 'https://iqdev.biz/fly-credit'
+    //     },
+    //   ],
+    // },
+    // {
+    //   images: [
+    //     {
+    //       title: 'title',
+    //       path: '/project9.png',
+    //       location: 'https://iqdev.biz/befoundnext/'
+    //     },
+    //     {
+    //       title: 'title',
+    //       path: '/project10.png',
+    //       location: 'https://iqdev.biz/manam-dental/'
+    //     },
+    //     {
+    //       title: 'title',
+    //       path: '/project11.gif',
+    //       location: 'https://iqdev.biz/peru/'
+    //     }
+    //   ],
+    // },
   ],
 };
 

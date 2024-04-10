@@ -32,6 +32,11 @@ const workSlider = {
           path: '/project5.png',
           location: 'https://github.com/ianujvarshney/CapitalOne-Travel'
         },
+        {
+          title: 'title',
+          path: '/project6.png',
+          location: 'https://tempo.live/'
+        },
         // {
         //   title: 'title',
         //   path: '/project6.png',

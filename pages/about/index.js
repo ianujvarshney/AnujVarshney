@@ -76,7 +76,11 @@ const aboutData = [
       },
       {
         title: 'React Developer - iQuincesoft',
-        stage: '1+ years',
+        stage: '1.2 years',
+      },
+      {
+        title: 'React Developer - QHR Solution',
+        stage: '0.8 years',
       },
     ],
   },
@@ -85,7 +89,7 @@ const aboutData = [
     info: [
       {
         title: 'MCA | CUIDOL | Chandigarh University',
-        stage: 'Persuing',
+        stage: 'Completed',
       },
       {
         title: 'BCA | RATM | DR. BR AMBEDKAR UNIVERSITY',

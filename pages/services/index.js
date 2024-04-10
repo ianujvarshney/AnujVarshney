@@ -1,7 +1,4 @@
 
-
-
-//service data
 export const serviceData = () => {
   return (
     <div></div>

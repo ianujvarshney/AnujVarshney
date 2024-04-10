@@ -25,30 +25,30 @@ const workSlider = {
         },
       ],
     },
-    // {
-    //   images: [
-    //     {
-    //       title: 'title',
-    //       path: '/project5.png',
-    //       location: 'https://iqdev.biz/pushman/'
-    //     },
-    //     {
-    //       title: 'title',
-    //       path: '/project6.png',
-    //       location: 'https://awofields.com/'
-    //     },
-    //     {
-    //       title: 'title',
-    //       path: '/project7.png',
-    //       location: 'https://lzh.3bd.myftpupload.com/'
-    //     },
-    //     {
-    //       title: 'title',
-    //       path: '/project8.png',
-    //       location: 'https://iqdev.biz/fly-credit'
-    //     },
-    //   ],
-    // },
+    {
+      images: [
+        {
+          title: 'title',
+          path: '/project5.png',
+          location: 'https://github.com/ianujvarshney/CapitalOne-Travel'
+        },
+        // {
+        //   title: 'title',
+        //   path: '/project6.png',
+        //   location: 'https://awofields.com/'
+        // },
+        // {
+        //   title: 'title',
+        //   path: '/project7.png',
+        //   location: 'https://lzh.3bd.myftpupload.com/'
+        // },
+        // {
+        //   title: 'title',
+        //   path: '/project8.png',
+        //   location: 'https://iqdev.biz/fly-credit'
+        // },
+      ],
+    },
     // {
     //   images: [
     //     {

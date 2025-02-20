@@ -37,11 +37,11 @@ const workSlider = {
           path: '/project6.png',
           location: 'https://tempo.live/'
         },
-        // {
-        //   title: 'title',
-        //   path: '/project6.png',
-        //   location: 'https://awofields.com/'
-        // },
+        {
+          title: 'title',
+          path: '/project7.png',
+          location: 'https://ronx.vercel.app/'
+        },
         // {
         //   title: 'title',
         //   path: '/project7.png',

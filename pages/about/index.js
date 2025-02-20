@@ -11,105 +11,81 @@ import {
   FaFigma,
 } from "react-icons/fa";
 
-import {
-  SiNextdotjs,
-  SiRedux,
-  SiTailwindcss
-} from "react-icons/si";
-
+import { SiNextdotjs, SiRedux, SiTailwindcss } from "react-icons/si";
 
 //  data
 const aboutData = [
-  // {
-  //   title: 'skills',
-  //   info: [
-  //     {
-  //       title: 'Web Development',
-  //       icons: [
-  //         <FaHtml5 />,
-  //         <FaCss3 />,
-  //         <FaJs />,
-  //         <FaReact />,
-  //         <SiNextdotjs />,
-  //         <SiRedux />,
-  //         <SiTailwindcss />,
-  //         <FaWordpress />,
-  //       ],
-  //     },
-  //     {
-  //       title: 'UI/UX Design',
-  //       icons: [<FaFigma />],
-  //     },
-  //   ],
-  // },
   {
-    title: 'awards',
+    title: "awards",
     info: [
       {
-        title: 'Certificate Course in Html5, Css3, Js, Bootstrap Educba',
-        stage: '2022',
+        title: "Certificate Course in Html5, Css3, Js, Bootstrap Educba",
+        stage: "2022",
       },
       {
-        title: 'Hackerrank 5 Star Coderin c++',
-        stage: '2009 - 2010',
+        title: "Hackerrank 5 Star Coder in C++",
+        stage: "2009 - 2010",
       },
       {
-        title: 'Winning Hacktoberfest 2020',
-        stage: '2020',
+        title: "Winning Hacktoberfest 2020",
+        stage: "2020",
       },
       {
-        title: 'Winning React-Day Program Swags',
-        stage: '2020',
+        title: "Winning React-Day Program Swags",
+        stage: "2020",
       },
       {
-        title: 'Participating in the raffle by. Storyblok',
-        stage: '2020',
+        title: "Participating in the raffle by Storyblok",
+        stage: "2020",
       },
     ],
   },
   {
-    title: 'experience',
+    title: "experience",
     info: [
       {
-        title: 'Software Developer Intern - iQuincesoft',
-        stage: '6 Month',
+        title: "Software Developer Intern - iQuincesoft",
+        stage: "6 Month",
       },
       {
-        title: 'React Developer - iQuincesoft',
-        stage: '1.2 years',
+        title: "React Developer - iQuincesoft",
+        stage: "1.5 years",
       },
       {
-        title: 'React Developer - QHR Solution',
-        stage: '0.8 years',
+        title: "React Developer - QHR Solution",
+        stage: "0.8 years",
+      },
+      {
+        title: "MERN Stack Developer - All Digital",
+        stage: "Present",
       },
     ],
   },
   {
-    title: 'credentials',
+    title: "credentials",
     info: [
       {
-        title: 'MCA | CUIDOL | Chandigarh University',
-        stage: 'Completed',
+        title: "MCA | CUIDOL | Chandigarh University",
+        stage: "2024",
       },
       {
-        title: 'BCA | RATM | DR. BR AMBEDKAR UNIVERSITY',
-        stage: '2021',
+        title: "BCA | RATM | DR. BR AMBEDKAR UNIVERSITY",
+        stage: "2021",
       },
     ],
   },
 ];
 
 //components
-import Avatar from '../../components/Avatar'
-import Circles from '../../components/Circles'
+import Avatar from "../../components/Avatar";
+import Circles from "../../components/Circles";
 
 //framer motion
 import { motion } from "framer-motion";
-import { fadeIn } from '../../variants'
+import { fadeIn } from "../../variants";
 
 //counters
 import CountUp from "react-countup";
-
 
 const About = () => {
   const [index, setIndex] = useState(0);
@@ -126,18 +102,42 @@ const About = () => {
       <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6">
         {/* text */}
         <div className="flex-1 flex flex-col justify-center">
-          <motion.h2 variants={fadeIn('right', 0.2)} initial="hidden" animate="show" exit="hidden" className="h2"><span className="text-accent">Web </span>Developer Portfolio</motion.h2>
-          <motion.p variants={fadeIn('right', 0.4)} initial="hidden" animate="show" exit="hidden" className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0 ">
-            Hello, I Am Currently Pursuing My MCA at CUIDOL, Specializing in Computer Science. I Have Successfully Completed My B.C.A, Also Specializing in Computer Science. Currently.
+          <motion.h2
+            variants={fadeIn("right", 0.2)}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            className="h2"
+          >
+            <span className="text-accent">Web </span>Developer Portfolio
+          </motion.h2>
+          <motion.p
+            variants={fadeIn("right", 0.4)}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0 "
+          >
+            Hello, I have completed my MCA at CUIDOL, specializing in Computer
+            Science. I have also successfully completed my BCA, specializing in
+            Computer Science.
           </motion.p>
-          <motion.div variants={fadeIn('right', 0.6)} initial="hidden" animate="show" exit="hidden" className="hidden md:flex md:max-w-xl xl:max-w-none mx-auto xl:mx-0 mb-8">
+          <motion.div
+            variants={fadeIn("right", 0.6)}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            className="hidden md:flex md:max-w-xl xl:max-w-none mx-auto xl:mx-0 mb-8"
+          >
             <div className="flex flex-1 xl:gap-6 ">
               {/* experience */}
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={2} duration={5} /> +
+                  <CountUp start={0} end={3} duration={5} /> +
                 </div>
-                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">Years of experience</div>
+                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
+                  Years of experience
+                </div>
               </div>
 
               {/* experience */}
@@ -163,48 +163,61 @@ const About = () => {
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">Winning awards</div>
               </div> */}
-
             </div>
           </motion.div>
         </div>
 
         {/* info */}
-        <motion.div variants={fadeIn('left', 0.4)} initial="hidden" animate="show" exit="hidden" className="flex flex-col w-full xl:max-w-[48%] h-[480px] ">
+        <motion.div
+          variants={fadeIn("left", 0.4)}
+          initial="hidden"
+          animate="show"
+          exit="hidden"
+          className="flex flex-col w-full xl:max-w-[48%] h-[480px] "
+        >
           <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
             {aboutData.map((item, itemIndex) => {
               return (
-                <div key={itemIndex}
-                  className={`${index === itemIndex && 'text-accent after:w-[100%] after:bg-accent after:transition-all after:duration-300'} "cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`} onClick={() => setIndex(itemIndex)}>
+                <div
+                  key={itemIndex}
+                  className={`${
+                    index === itemIndex &&
+                    "text-accent after:w-[100%] after:bg-accent after:transition-all after:duration-300"
+                  } "cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}
+                  onClick={() => setIndex(itemIndex)}
+                >
                   {item.title}
                 </div>
-              )
+              );
             })}
           </div>
 
           <div className="py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start">
-            {
-              aboutData[index].info.map((item, itemIndex) => {
-                return (
-                  <div key={itemIndex} className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60">
-                    {/* title */}
-                    <div className="font-light mb-2 mb:mb-0">{item.title}</div>
-                    <div className="hidden md:flex">-</div>
-                    <div >{item.stage}</div>
-                    <div className="flex gap-x-4">
-                      {/* icons */}
-                      {
-                        item.icons?.map((icon, itemIndex) => {
-                          return <div className="text-2xl" key={itemIndex}>{icon}</div>
-                        })
-                      }
-                    </div>
+            {aboutData[index].info.map((item, itemIndex) => {
+              return (
+                <div
+                  key={itemIndex}
+                  className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60"
+                >
+                  {/* title */}
+                  <div className="font-light mb-2 mb:mb-0">{item.title}</div>
+                  <div className="hidden md:flex">-</div>
+                  <div>{item.stage}</div>
+                  <div className="flex gap-x-4">
+                    {/* icons */}
+                    {item.icons?.map((icon, itemIndex) => {
+                      return (
+                        <div className="text-2xl" key={itemIndex}>
+                          {icon}
+                        </div>
+                      );
+                    })}
                   </div>
-                )
-              })
-            }
+                </div>
+              );
+            })}
           </div>
         </motion.div>
-
       </div>
     </div>
   );

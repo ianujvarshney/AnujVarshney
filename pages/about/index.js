@@ -99,7 +99,7 @@ const About = () => {
         <Avatar />
       </motion.div> */}
 
-      <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6">
+      <div className="container max-w-full h-full flex flex-col items-center xl:flex-row gap-x-6">
         {/* text */}
         <div className="flex-1 flex flex-col justify-center">
           <motion.h2
@@ -109,7 +109,7 @@ const About = () => {
             exit="hidden"
             className="h2"
           >
-            <span className="text-accent">Web </span>Developer Portfolio
+            <span className="text-accent">Web </span>Developer
           </motion.h2>
           <motion.p
             variants={fadeIn("right", 0.4)}
@@ -133,7 +133,7 @@ const About = () => {
               {/* experience */}
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={3} duration={5} /> +
+                  <CountUp start={0} end={4} duration={5} /> +
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                   Years of experience
@@ -166,7 +166,6 @@ const About = () => {
             </div>
           </motion.div>
         </div>
-
         {/* info */}
         <motion.div
           variants={fadeIn("left", 0.4)}

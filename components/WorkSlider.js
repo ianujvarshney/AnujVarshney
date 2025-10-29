@@ -92,7 +92,6 @@ import { Pagination } from 'swiper'
 //icons
 import { BsArrowRight } from 'react-icons/bs'
 
-// next image 
 import Image from 'next/image';
 
 const WorkSlider = () => {

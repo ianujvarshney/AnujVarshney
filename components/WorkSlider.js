@@ -11,27 +11,29 @@ const workSlider = {
         {
           title: 'title',
           path: '/project2.png',
-          location: 'https://caritasrevolution.com/'
-        },
-        {
-          title: 'title',
-          path: '/project3.png',
-          location: 'https://anujvarshney.live/'
+          location: 'https://caritasrevolution.org/'
         },
         {
           title: 'title',
           path: '/project4.png',
           location: 'https://snap-short-url.vercel.app/'
         },
+        {
+          title: 'title',
+          path: '/project5.png',
+          location: 'https://vcoder.io/'
+        },
+        // {
+        //   title: 'title',
+        //   path: '/project3.png',
+        //   location: 'https://anujvarshney.live/'
+        // },
+   
       ],
     },
     {
       images: [
-        {
-          title: 'title',
-          path: '/project5.png',
-          location: 'https://github.com/ianujvarshney/CapitalOne-Travel'
-        },
+    
         {
           title: 'title',
           path: '/project6.png',

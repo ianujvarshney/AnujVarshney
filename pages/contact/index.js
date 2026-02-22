@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 // icons
-import { BsArrowRight } from 'react-icons/bs'
+import { BsArrowRight, BsCheckCircleFill, BsExclamationTriangleFill } from 'react-icons/bs'
+import { IoClose } from 'react-icons/io5'
 // framer
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 // variants
 import { fadeIn } from '../../variants'
 // firebase
@@ -12,6 +13,33 @@ import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import emailjs from '@emailjs/browser';
 
 import Circles from '../../components/Circles';
+
+const StatusPopup = ({ type, message, onClose }) => {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: -50, scale: 0.9 }}
+      animate={{ opacity: 1, y: 0, scale: 1 }}
+      exit={{ opacity: 0, scale: 0.9, transition: { duration: 0.2 } }}
+      className={`fixed top-10 left-1/2 -translate-x-1/2 z-[100] flex items-center gap-x-4 p-4 rounded-xl shadow-2xl min-w-[320px] border backdrop-blur-md ${type === 'success'
+        ? 'bg-accent/20 border-accent text-accent'
+        : 'bg-red-500/20 border-red-500 text-red-500'
+        }`}
+    >
+      <div className='text-2xl'>
+        {type === 'success' ? <BsCheckCircleFill /> : <BsExclamationTriangleFill />}
+      </div>
+      <div className='flex-1 font-medium'>
+        {message}
+      </div>
+      <button
+        onClick={onClose}
+        className='text-xl hover:scale-125 transition-all duration-200'
+      >
+        <IoClose />
+      </button>
+    </motion.div>
+  );
+}
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -23,6 +51,17 @@ const Contact = () => {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState('');
+
+  // Auto-hide popup after 5 seconds
+  useEffect(() => {
+    if (success || error) {
+      const timer = setTimeout(() => {
+        setSuccess(false);
+        setError('');
+      }, 5000);
+      return () => clearTimeout(timer);
+    }
+  }, [success, error]);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -76,8 +115,28 @@ const Contact = () => {
   return (
     <div className='h-full bg-primary/30'>
       <Circles />
+
+      {/* Popups */}
+      <AnimatePresence>
+        {success && (
+          <StatusPopup
+            type="success"
+            message="Message sent successfully!"
+            onClose={() => setSuccess(false)}
+          />
+        )}
+        {error && (
+          <StatusPopup
+            type="error"
+            message={error}
+            onClose={() => setError('')}
+          />
+        )}
+      </AnimatePresence>
+
       <div className="container mx-auto py-32 text-center xl:text-left flex items-center justify-center h-full">
         <div className="flex flex-col w-full max-w-[700px]">
+          {/* text */}
           <motion.h2
             variants={fadeIn('up', 0.2)}
             initial="hidden"
@@ -88,6 +147,7 @@ const Contact = () => {
             Let&apos;s <span className='text-accent'>connect.</span>
           </motion.h2>
 
+          {/* form */}
           <motion.form
             onSubmit={handleSubmit}
             variants={fadeIn('up', 0.4)}
@@ -96,6 +156,7 @@ const Contact = () => {
             exit="hidden"
             className='flex-1 flex flex-col gap-6 w-full mx-auto'
           >
+            {/* input group */}
             <div className='flex gap-x-6 w-full'>
               <input
                 type="text"
@@ -145,9 +206,6 @@ const Contact = () => {
               <BsArrowRight className={`${loading ? 'hidden' : 'block'} -translate-y-[120%] opacity-0 group-hover:flex group-hover:-translate-y-0 group-hover:opacity-100 transition-all duration-300 absolute text-[22px]`} />
               <span className={`${loading ? 'block' : 'hidden'}`}>Sending...</span>
             </button>
-
-            {success && <p className="text-accent mt-4">Message sent successfully!</p>}
-            {error && <p className="text-red-500 mt-4">{error}</p>}
           </motion.form>
         </div>
       </div>

@@ -13,68 +13,7 @@ import {
 
 import { SiNextdotjs, SiRedux, SiTailwindcss } from "react-icons/si";
 
-//  data
-const aboutData = [
-  {
-    title: "awards",
-    info: [
-      {
-        title: "Certificate Course in Html5, Css3, Js, Bootstrap Educba",
-        stage: "2022",
-      },
-      {
-        title: "Hackerrank 5 Star Coder in C++",
-        stage: "2009 - 2010",
-      },
-      {
-        title: "Winning Hacktoberfest 2020",
-        stage: "2020",
-      },
-      {
-        title: "Winning React-Day Program Swags",
-        stage: "2020",
-      },
-      {
-        title: "Participating in the raffle by Storyblok",
-        stage: "2020",
-      },
-    ],
-  },
-  {
-    title: "experience",
-    info: [
-      {
-        title: "Software Developer Intern - iQuincesoft",
-        stage: "6 Month",
-      },
-      {
-        title: "React Developer - iQuincesoft",
-        stage: "1.5 years",
-      },
-      {
-        title: "Mern Stack Developer - QHR Solution",
-        stage: "0.8 year",
-      },
-      {
-        title: "MERN Stack Developer - All Digital",
-        stage: "1 year",
-      },
-    ],
-  },
-  {
-    title: "credentials",
-    info: [
-      {
-        title: "MCA | CUIDOL | Chandigarh University",
-        stage: "2024",
-      },
-      {
-        title: "BCA | RATM | DR. BR AMBEDKAR UNIVERSITY",
-        stage: "2021",
-      },
-    ],
-  },
-];
+
 
 //components
 import Avatar from "../../components/Avatar";
@@ -89,6 +28,73 @@ import CountUp from "react-countup";
 
 const About = () => {
   const [index, setIndex] = useState(0);
+
+  //  data
+  const aboutData = [
+    {
+      title: "awards",
+      info: [
+        {
+          title: "Certificate Course in Html5, Css3, Js, Bootstrap Educba",
+          stage: "2022",
+        },
+        {
+          title: "Hackerrank 5 Star Coder in C++",
+          stage: "2009 - 2010",
+        },
+        {
+          title: "Winning Hacktoberfest 2020",
+          stage: "2020",
+        },
+        {
+          title: "Winning React-Day Program Swags",
+          stage: "2020",
+        },
+        {
+          title: "Participating in the raffle by Storyblok",
+          stage: "2020",
+        },
+      ],
+    },
+    {
+      title: "experience",
+      info: [
+        {
+          title: "Software Developer Intern - iQuincesoft",
+          stage: "6 Month",
+        },
+        {
+          title: "React Developer - iQuincesoft",
+          stage: "1.5 years",
+        },
+        {
+          title: "Mern Stack Developer - QHR Solution",
+          stage: "0.8 year",
+        },
+        {
+          title: "MERN Stack Developer - All Digital",
+          stage: "0.8 year",
+        },
+        {
+          title: "Assistant Developer - Inriser Consultancy Pvt. Ltd.",
+          stage: "3 Months",
+        },
+      ],
+    },
+    {
+      title: "credentials",
+      info: [
+        {
+          title: "MCA | CUIDOL | Chandigarh University",
+          stage: "2024",
+        },
+        {
+          title: "BCA | RATM | DR. BR AMBEDKAR UNIVERSITY",
+          stage: "2021",
+        },
+      ],
+    },
+  ];
 
   return (
     <div className="h-full bg-primary/30 py-32 text-center xl:text-left">
@@ -180,10 +186,9 @@ const About = () => {
               return (
                 <div
                   key={itemIndex}
-                  className={`${
-                    index === itemIndex &&
+                  className={`${index === itemIndex &&
                     "text-accent after:w-[100%] after:bg-accent after:transition-all after:duration-300"
-                  } "cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}
+                    } "cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}
                   onClick={() => setIndex(itemIndex)}
                 >
                   {item.title}

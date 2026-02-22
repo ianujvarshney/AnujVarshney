@@ -35,9 +35,9 @@ const Services = () => {
               className="mb-4 max-w-[400px] mx-auto lg:mx-0"
             >
               {" "}
-              React Developer, Next Developer, MERN Stack Developer, Blockchain
+              React Developer, React Native Developer, Next Developer, Full Stack Developer, Blockchain
               Enthusiast, Open Source Contributor, Node.js Developer, React
-              Developer, Next Developer, MERN Stack Developer, Blockchain
+              Developer, Next Developer, Full Stack Developer, Blockchain
               Enthusiast, Open Source Contributor, Node.js Developer,visually
               stunning websites with expertise in React.js, Next.js. Ensuring
               speed, accessibility, and seamless performance.

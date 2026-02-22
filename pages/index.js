@@ -18,13 +18,17 @@ const Home = () => {
       "React Developer",
       "Next Developer",
       "MERN Stack Developer",
+      "PERN Stack Developer",
       "Blockchain Enthusiast",
+      "React Native Developer",
       "Open Source Contributor",
       "Node.js Developer",
       "React Developer",
       "Next Developer",
       "MERN Stack Developer",
+      "PERN Stack Developer",
       "Blockchain Enthusiast",
+      "React Native Developer",
       "Open Source Contributor",
       "Node.js Developer",
     ],
@@ -55,7 +59,7 @@ const Home = () => {
             exit="hidden"
             className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16"
           >
-            Passionate developer skilled in React, Next.js, and MERN stack.
+            Passionate developer skilled in React, Next.js, and Full Stack.
             Enthusiast in blockchain tech and open source. Transforming ideas
             into digital reality. 🚀🌿
           </motion.p>

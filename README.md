@@ -1,34 +1,39 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Anuj Varshney – Portfolio
 
-## Getting Started
+Personal portfolio of Anuj Varshney, Full Stack Developer. Built with Next.js 13 (Pages Router), Tailwind CSS and Framer Motion, deployed on Vercel.
 
-First, run the development server:
+## Pages
+
+| Route | Content |
+|---|---|
+| `/` | Hero with role typewriter, particles and avatar |
+| `/about` | Summary, experience, skills, education and awards (tabs) |
+| `/services` | What I offer |
+| `/work` | Project cards with live and source links |
+| `/contact` | Contact form (saved to Firestore, emailed via EmailJS) |
+
+## Getting started
 
 ```bash
-npm run dev
-# or
-yarn dev
+npm install
+cp .env.example .env.local   # then fill in the values
+npm run dev                  # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Other scripts: `npm run build`, `npm start`, `npm run lint`.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Configuration
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+All variables are listed in `.env.example`:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- `NEXT_PUBLIC_SITE_URL`: public URL used for canonical links and Open Graph tags (defaults to `https://anujvarshney.tech`). Also update `public/robots.txt` and `public/sitemap.xml` if the domain changes.
+- `NEXT_PUBLIC_FIREBASE_*`: Firebase web config; contact messages go to the Firestore `contacts` collection.
+- `NEXT_PUBLIC_EMAILJS_*`: EmailJS service, template and public key for the notification email.
 
-## Learn More
+## Where things live
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Site details and social links: `lib/site.js`
+- SEO tags per page: `components/Seo.js`
+- Projects: `components/ProjectGrid.js`
+- Services: `components/ServiceGrid.js`
+- About tabs (experience, skills, education, awards): `pages/about/index.js`

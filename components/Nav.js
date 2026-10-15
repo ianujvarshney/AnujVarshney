@@ -4,7 +4,6 @@ import {
   HiUser,
   HiViewColumns,
   HiRectangleGroup,
-  HiChatBubbleBottomCenterText,
   HiEnvelope,
 } from 'react-icons/hi2';
 
@@ -14,11 +13,6 @@ export const navData = [
   { name: 'about', path: '/about', icon: <HiUser /> },
   { name: 'services', path: '/services', icon: <HiRectangleGroup /> },
   { name: 'work', path: '/work', icon: <HiViewColumns /> },
-  // {
-  //   name: 'testimonials',
-  //   path: '/testimonials',
-  //   icon: <HiChatBubbleBottomCenterText />,
-  // },
   {
     name: 'contact',
     path: '/contact',
@@ -35,27 +29,36 @@ import { useRouter } from 'next/router';
 const Nav = () => {
   const router = useRouter();
   const pathname = router.pathname
-  return <nav className='flex flex-col items-center gap-y-4  xl:justify-center fixed h-max bottom-0 mt-auto xl:right-[2%] z-50 top-0 w-full xl:w-16 xl:max-extw-md xl:h-screen'>
+  return <nav aria-label="Main" className='fixed bottom-0 z-50 w-full xl:w-16 xl:h-screen xl:top-0 xl:right-[2%] flex flex-col items-center xl:justify-center'>
     {/* inner */}
-    <div className='flex w-full xl:flex-col items-center justify-between xl:justify-center gap-y-10 px-4 md:px-40 xl:px-0 h-[80px]  xl:h-max py-8 bg-white/10 backdrop-blur-sm text-3xl xl:text-xl xl:rounded-full'>
+    <ul className='flex w-full xl:flex-col items-center justify-between xl:justify-center xl:gap-y-10 px-4 sm:px-16 md:px-40 xl:px-0 h-[72px] xl:h-max xl:py-8 bg-[#131424]/80 xl:bg-white/10 backdrop-blur-sm text-2xl xl:text-xl xl:rounded-full border-t border-white/10 xl:border-0'>
       {
-        navData.map((link, index) => {
-          return <Link className={`${link.path === pathname && 'text-accent'} relative flex items-center group hover:text-accent transition-all duration-300`} href={link.path} key={index}>
-
-            {/* tooltip */}
-            <div className="absolute pr-14 right-0 hidden xl:group-hover:flex">
-              <div className='bg-white relative flex text-primary items-center p-[6px] rounded-[3px]'>
-                <div className='text-[12px] leading-none font-semibold capitalize'>{link.name}
+        navData.map((link) => {
+          const active = link.path === pathname;
+          return <li key={link.path}>
+            <Link
+              className={`${active ? 'text-accent' : ''} relative flex flex-col items-center justify-center gap-y-1 min-w-[48px] min-h-[48px] rounded-full group hover:text-accent focus-visible:text-accent transition-colors duration-300`}
+              href={link.path}
+              aria-label={link.name.charAt(0).toUpperCase() + link.name.slice(1)}
+              aria-current={active ? 'page' : undefined}
+            >
+              {/* tooltip (desktop) */}
+              <div className="absolute pr-14 right-0 hidden xl:group-hover:flex xl:group-focus-visible:flex" aria-hidden="true">
+                <div className='bg-white relative flex text-primary items-center p-[6px] rounded-[3px]'>
+                  <div className='text-[12px] leading-none font-semibold capitalize'>{link.name}
+                  </div>
+                  {/* triangle */}
+                  <div className="border-solid border-l-white border-l-8 border-y-transparent border-y-[6px] border-r-0 absolute -right-2"></div>
                 </div>
-                {/* triangle */}
-                <div className="border-solid border-l-white border-l-8 border-y-transparent border-y-[6px] border-r-0 absolute -right-2"></div>
               </div>
-            </div>
-            <div>{link.icon}</div>
-          </Link>
+              <div aria-hidden="true">{link.icon}</div>
+              {/* label (mobile) */}
+              <span className='xl:hidden text-[11px] leading-none capitalize' aria-hidden="true">{link.name}</span>
+            </Link>
+          </li>
         })
       }
-    </div>
+    </ul>
   </nav>;
 };
 

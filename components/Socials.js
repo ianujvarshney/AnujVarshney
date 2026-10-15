@@ -1,30 +1,34 @@
-// next Link
-import Link from "next/link";
-
 //icons
-import { RiGithubFill, RiDiscordFill, RiTwitterLine, RiInstagramLine, RiFacebookBoxLine, RiDragDropLine, RiBehanceLine, RiPinterestLine } from 'react-icons/ri'
+import { RiGithubFill, RiLinkedinFill, RiTwitterXLine, RiInstagramLine, RiDiscordFill } from 'react-icons/ri'
+
+// links
+import { socials } from '../lib/site';
+
+const icons = {
+  GitHub: <RiGithubFill />,
+  LinkedIn: <RiLinkedinFill />,
+  'X (Twitter)': <RiTwitterXLine />,
+  Instagram: <RiInstagramLine />,
+  Discord: <RiDiscordFill />,
+};
 
 const Socials = () => {
-  return <div className="flex items-center gap-x-5 text-lg">
-    <Link href={'https://twitter.com/ianujvarshney'} className="hover:text-accent transition-all duration-300">
-      <RiTwitterLine />
-    </Link>
-    <Link href={'https://discord.com/channels/@anujvarshney'} className="hover:text-accent transition-all duration-300">
-      <RiDiscordFill />
-    </Link>
-    <Link href={'https://www.instagram.com/ianujvarshney/'} className="hover:text-accent transition-all duration-300">
-      <RiInstagramLine />
-    </Link>
-    {/* <Link href={'https://www.facebook.com/IamtheAnujvar/'} className="hover:text-accent transition-all duration-300">
-      <RiFacebookBoxLine />
-    </Link> */}
-    {/* <Link href={''} className="hover:text-accent transition-all duration-300">
-      <RiDragDropLine />
-    </Link> */}
-    <Link href={'https://github.com/ianujvarshney'} className="hover:text-accent transition-all duration-300">
-      <RiGithubFill/>
-    </Link>
-  </div>;
+  return <ul className="flex items-center text-lg">
+    {socials.map((social) => (
+      <li key={social.name}>
+        <a
+          href={social.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`${social.name} (opens in a new tab)`}
+          title={social.name}
+          className="flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 rounded-full hover:text-accent transition-colors duration-300"
+        >
+          {icons[social.name]}
+        </a>
+      </li>
+    ))}
+  </ul>;
 };
 
 export default Socials;

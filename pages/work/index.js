@@ -1,6 +1,6 @@
-import WorkSlider from "../../components/WorkSlider";
+import ProjectCarousel from "../../components/ProjectCarousel";
 import Bulb from "../../components/Bulb";
-import Circles from "../../components/Circles";
+import Seo from "../../components/Seo";
 
 // framer motion
 import { motion } from "framer-motion";
@@ -8,44 +8,47 @@ import { fadeIn } from "../../variants";
 
 const Work = () => {
   return (
-    <div className="h-full bg-primary/30 py-36 flex items-center">
-      <Circles />
-      <div className="container mx-auto">
-        <div className="flex flex-col xl:flex-row gap-x-8">
+    <div className="page-section">
+      <Seo
+        title="Work"
+        path="/work"
+        description="Selected work by Anuj Varshney: the Equitty One market news app (Google Play and App Store), Web3 dashboards, DApps, event platforms and company websites."
+      />
+      <div className="container mx-auto relative z-20">
+        <div className="flex flex-col xl:flex-row xl:items-center gap-x-12">
           {/* text */}
-          <div className="text-center flex xl:w-[30vw] flex-col lg:text-left mb-4 xl:mb-0">
-            <motion.h2
+          <div className="text-center flex xl:w-[30vw] flex-col xl:text-left mb-6 xl:mb-0 shrink-0">
+            <motion.h1
               variants={fadeIn("up", 0.2)}
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="h2 xl:mt-8"
+              className="h2"
             >
               My work <span className="text-accent">.</span>
-            </motion.h2>
+            </motion.h1>
             <motion.p
               variants={fadeIn("up", 0.4)}
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="mb-4 max-w-[400px] mx-auto lg:mx-0"
+              className="max-w-[400px] mx-auto xl:mx-0"
             >
-              Developed secure and high-performance web applications using
-              React.js, Next.js, and WordPress. Optimized DApps with Web3.js,
-              Infura, and The Graph for seamless blockchain interactions.
-              Conducted smart contract audits to enhance security and
-              efficiency.
+              Building the real-time backend behind the Equitty One app at
+              Inriser. Before that: DeFi and NFT DApps with Web3.js and The
+              Graph, 15+ smart contract audits, SaaS APIs and fast React and
+              Next.js web apps.
             </motion.p>
           </div>
-          {/* slider */}
+          {/* projects, scrolled sideways */}
           <motion.div
             variants={fadeIn("down", 0.6)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="w-full xl:max-w-[65%]"
+            className="w-full min-w-0 xl:max-w-[65%]"
           >
-            <WorkSlider />
+            <ProjectCarousel />
           </motion.div>
         </div>
       </div>
